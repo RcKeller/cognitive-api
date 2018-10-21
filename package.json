@@ -14,6 +14,7 @@
     "auto-bind": "^1.2.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
+    "cognitive-services": "^1.2.1",
     "compression": "^1.7.3",
     "cors": "^2.8.4",
     "express": "^4.16.3",
@@ -23,7 +24,9 @@
     "lorem-ipsum": "^1.0.6",
     "method-override": "^2.3.10",
     "morgan": "^1.9.1",
-    "openssl-self-signed-certificate": "^1.1.6"
+    "openssl-self-signed-certificate": "^1.1.6",
+    "promise-retry": "^1.1.1",
+    "sleep-promise": "^8.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.3",
