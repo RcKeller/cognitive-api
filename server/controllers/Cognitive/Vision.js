@@ -10,6 +10,11 @@ module.exports = class Vision extends Azure {
     router.post('/vision', this.getVision)
     console.log('AZUR: Analyzing images using computer vision at .../vision')
   }
+  /*
+  Example:
+  POST http://localhost:3000/api/v1/vision
+  {"url":"https://upload.wikimedia.org/wikipedia/commons/3/3c/Shaki_waterfall.jpg"}
+  */
   async getVision (req, res) {
     try {
       const { body } = req
