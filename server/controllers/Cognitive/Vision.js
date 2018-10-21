@@ -1,3 +1,4 @@
+const autobind = require('auto-bind')
 const axios = require('axios')
 const cognitiveServices = require('cognitive-services')
 const Azure = require('./Azure')
@@ -5,8 +6,9 @@ const Azure = require('./Azure')
 module.exports = class Vision extends Azure {
   constructor (router) {
     super(router)
-    const client = new cognitiveServices.computerVision(this.azure)
-    router.get('/vision', this.getVision)
+    this.client = new cognitiveServices.computerVision(this.azure)
+    router.post('/vision', this.getVision)
+    console.log('AZUR: Analyzing images using computer vision at .../vision')
   }
   async getVision (req, res) {
     try {

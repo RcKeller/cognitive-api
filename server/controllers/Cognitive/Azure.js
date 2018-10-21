@@ -9,5 +9,6 @@ module.exports = class Azure {
   constructor() {
     autobind(this)
     this.azure = azure
+    console.log(`AZUR: Pointing at ${this.azure.endpoint}`)
   }
 }
